@@ -1,6 +1,6 @@
 import type { Config } from "tailwindcss";
 
-const config: Config = {
+export default {
   darkMode: ["class", "[data-theme='dark']"],
   content: [
     "./pages/**/*.{ts,tsx}",
@@ -19,10 +19,6 @@ const config: Config = {
       },
     },
     extend: {
-      fontSize: {
-        '16': '16px',
-        '14': '14px',
-      },
       colors: {
         fill: {
           1: "rgba(255, 255, 255, 0.10)",
@@ -108,6 +104,5 @@ const config: Config = {
     },
   },
   plugins: [],
-};
+} satisfies Config
 
-export default config;
