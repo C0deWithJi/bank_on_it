@@ -8,7 +8,15 @@ const nextConfig: NextConfig = {
         test: /\.css$/,
         use: [
           'style-loader',
-          'css-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+              modules: {
+                auto: true,
+              },
+            },
+          },
           'postcss-loader',
         ],
       });
