@@ -5,12 +5,14 @@ import "./globals.css";
 const inter = Inter({ 
   subsets: ["latin"],
   variable: "--font-inter",
+  display: "swap",
 });
 
-const ibm_plex_serif = IBM_Plex_Serif({
+const ibmplexserif = IBM_Plex_Serif({
   subsets: ["latin"],
   weight: ["400", "700"],
   variable: "--font-ibm-plex-serif",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -28,9 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.variable} ${ibm_plex_serif.variable} antialiased`}
-      >
+      <body className={`${inter.variable} ${ibmplexserif.variable}`}>
         {children}
       </body>
     </html>
